@@ -1,0 +1,31 @@
+<div class="card w-100 my-5">
+  <div class="card-body">
+    <h3 class="card-title text-center">User List</h3>
+    <button class="btn btn-outline-secondary mb-4 float-end" routerLink="/form">
+      ＋
+    </button>
+    <table class="table">
+      <thead>
+        <tr class="">
+          <th></th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Job</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td><img class="rounded-circle" [src]="user.image_url" alt="img" height="80"></td>
+          <td>{{ user.id }}</td>
+          <td>{{ user.firstName}} {{ user.lastName }} </td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.job }}</td>
+          <td> <button class="btn btn-outline-primary" [routerLink]="['/form', user.id]">⭯</button></td>
+          <td> <button class="btn btn-outline-danger" (click)="deleteUser(user.id)">✕</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

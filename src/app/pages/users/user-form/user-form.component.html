@@ -1,0 +1,99 @@
+<section>
+  <div class="card w-100 my-5">
+    <div class="card-body">
+      <h3 class="card-title text-center">User Form</h3>
+      <form [formGroup]="userForm">
+        <div class="row my-3">
+          <div class="col-6">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="firstName"
+                id="name"
+                placeholder="First Name"
+              >
+              <label for="name">First Name</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="lastName"
+                id="lastname"
+                placeholder="Last Name"
+              >
+              <label for="lastname">Last Name</label>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <div class="form-floating">
+              <input
+                type="number"
+                class="form-control"
+                formControlName="age"
+                id="age"
+                min="15" max="99"
+                placeholder="Age"
+              >
+              <label for="age">Age</label>
+            </div>
+          </div>
+          <div class="col-10">
+            <div class="form-floating">
+              <input
+                type="job"
+                class="form-control"
+                formControlName="job"
+                id="job"
+                placeholder="Job"
+              >
+              <label for="job">Job</label>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-10">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="image_url"
+                id="img"
+                placeholder="Image URL"
+              >
+              <label for="img">Image URL</label>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="form-floating">
+              <button
+                type="submit"
+                class="btn-outline-secondary form-control"
+                disabled 
+                id="submit"
+              >OK</button> <!--disabled to not upload file to the database-->
+              <label for="submit"></label>
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-6 my-3">
+            <button
+            (click)="actionBTN()"
+            class="btn btn-outline-primary col-12"
+              type="submit"
+            >Submit</button>
+          </div>
+          <div class="col-6 my-3">
+            <button class="btn btn-outline-warning col-12" type="reset">Reset</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
