@@ -1,0 +1,19 @@
+<mat-list-item role="listitem">
+  <div id="taskText" 
+    [ngStyle]="{textDecoration: done ? 'line-through' : 'none'}"
+  >
+    {{ taskItem.title }}
+  </div>
+  <div>
+    <button mat-icon-button color="primary"
+      (click)="checked()"
+    > <mat-icon>done</mat-icon>
+    </button>
+    <button mat-icon-button color="warn"
+      (click)="deleteTask()"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+</mat-list-item>
