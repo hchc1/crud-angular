@@ -9,10 +9,8 @@ import { UserListComponent } from './pages/users/user-list/user-list.component';
 import { UserFormComponent } from './pages/users/user-form/user-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './pages/todo/todo-list/todo-list.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -34,10 +32,8 @@ import { TaskItemComponent } from './pages/todo/task-item/task-item.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatGridListModule,
     MatListModule,
     MatButtonModule,
     MatIconModule,
